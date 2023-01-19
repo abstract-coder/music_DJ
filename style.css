@@ -1,0 +1,39 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-size: cover;
+}
+
+#my_title{
+    width: 100%;
+    background-color: rgb(213, 255, 215);
+    margin-top: 0px;
+    padding: 20px;
+}
+#note{
+    font-size: 14px;
+    font-style: italic;
+    color: gray;
+}
+
+.mybutton{
+    font-size: 20px;
+}
+
+#song_name{
+    font-size: 24px;
+    animation-name: song;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    width: 50%;
+    color: rgb(2, 8, 72);
+}
+
+@keyframes song{
+    from{
+        box-shadow: 20px 20px 50px inset aquamarine;
+    }
+
+    to{
+        box-shadow: 20px 20px 50px inset rgb(0, 255, 166);
+    }
+}
