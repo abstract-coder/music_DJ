@@ -37,3 +37,10 @@ body{
         box-shadow: 20px 20px 50px inset rgb(0, 255, 166);
     }
 }
+
+canvas{
+    background-color: rgb(213, 255, 215);
+    border: solid 3px aquamarine;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px gray;
+}
