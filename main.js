@@ -15,6 +15,22 @@ function setup(){
 canvas.position(470, 280);
 video = createCapture(VIDEO);
 video.hide();
+poseNet = ml5.poseNet(video, modelLoaded);
+poseNet.on('pose', gotPoses);
+}
+
+function modelLoaded(){
+    console.log("Model is loaded.");
+}
+
+function gotPoses(results){
+    if(results.length > 0)
+    {
+      left_x = results[0].pose.leftWrist.x;
+      left_y = results[0].pose.leftWrist.y;
+      right_x = results[0].pose.rightWrist.x;
+      right_y = results[0].pose.rightWrist.y;
+    }
 }
 
 function draw(){
