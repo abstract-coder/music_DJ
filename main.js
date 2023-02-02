@@ -49,9 +49,37 @@ function draw(){
         circle(left_x, left_y, 20);
         song_2.stop();
         if(song1status = "false"){
+            document.getElementById("song_name").innerHTML = "Song name: Harry Potter theme song";
             song_1.play();
-            document.getElementById(song_name).innerHTML = "Song name: Harry Potter theme song";
+            song1status = "true";
+        }
+    }
+    if(right_score > 0.2){
+        circle(right_x, right_y, 20);
+        song_1.stop();
+        if(song2status = "false"){
+            document.getElementById("song_name").innerHTML = "Song name: Peter Pan theme song";
+            song_2.play();
+            song2status = "true";
         }
     }
     
+}
+
+function play_music(){
+if(song1status = "true"){
+    song_2.stop();
+    song_1.play();
+}
+else{
+    song_1.stop();
+    song_2.play();
+}
+}
+
+function pause_music(){
+    song_1.pause();
+    song_2.pause();
+    song1status = "false";
+    song2status = "false";
 }
